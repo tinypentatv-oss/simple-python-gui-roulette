@@ -128,8 +128,8 @@ class RouletteApp:
 
     def determine_winner(self):
         arc_angle = 360 / len(self.items)
-        # Pointer is at 270 degrees (top of the circle)
-        pointer_position = (270 - self.rotation_angle) % 360
+        # Pointer is at 90 degrees (top of the circle in tkinter)
+        pointer_position = (90 - self.rotation_angle) % 360
         winner_index = int(pointer_position // arc_angle)
         winner = self.items[winner_index]
 
